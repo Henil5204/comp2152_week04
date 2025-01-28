@@ -82,8 +82,13 @@ good_loot_options = ["Health Potion", "Leather Boots"]
 bad_loot_options = ["Poison Potion"]
 
 # Define the number of stars awarded to the Player
-num_stars = 0
+monster_power={
+    "Fire Magic":2, 
+    "freezing Time": 4,
+    "Super Healing":6,
+}
 
+num_stars=0;
 # Use a While Loop to get valid input for Hero and Monster's Combat Strength
 i = 0
 
@@ -130,7 +135,7 @@ elif weaponRoll <= 4:
 else:
     print("--- Nice weapon, friend!")
 
-# If the weapon rolled is not a Fist, print out "Thank goodness you didn't roll the Fist..."
+# If the weapon rolled is not a Fist, print out "Thank goodness you didn't roll the Fist..."-up
 if weapons[weaponRoll - 1] != "Fist":
     print("--- Thank goodness you didn't roll the Fist...")
 
@@ -150,6 +155,10 @@ print("--- You are matched in strength: " + str(combat_strength == m_combat_stre
 
 # Check the Player's overall strength and health
 print("--- You have a strong player: " + str((combat_strength + health_points) >= 15))
+
+# Lab04- q2
+# Roll for the monster's power
+input("Roll for the monster's magic ")
 
 # Loop while the monster and the player are alive. Call fight sequence functions
 print("You meet the monster. FIGHT!!")
